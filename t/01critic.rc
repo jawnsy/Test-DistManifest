@@ -56,8 +56,8 @@ allow_leading_tabs = 0
 
 # Ensure that appropriate POD sections exist
 [Documentation::RequirePodSections]
-lib_sections    = NAME|DESCRIPTION|SYNOPSIS|AUTHOR|COPYRIGHT
-script_sections = NAME|DESCRIPTION|SYNOPSIS|AUTHOR|COPYRIGHT
+lib_sections    = NAME|DESCRIPTION|SYNOPSIS|AUTHOR|LICENSE
+script_sections = NAME|DESCRIPTION|SYNOPSIS|AUTHOR|LICENSE
 
 # This restriction is silly; some measure of performance gain is not worth
 # isolating the documentation from the code it documents.

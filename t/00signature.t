@@ -21,7 +21,6 @@ if ($@) {
   plan skip_all => 'Test::Signature required to test SIGNATURE files';
 }
 
-plan tests => 2;
-use Test::NoWarnings; # 1 test
+plan tests => 1;
 
 signature_ok(); # 1 test
