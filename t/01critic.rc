@@ -1,0 +1,68 @@
+# Perl::Critic resource file
+#
+# $Id$
+#
+# Copyright (c) 2008 Jonathan Yu
+#
+# This configuration file is hereby released into the public domain.
+
+severity = brutal
+
+###################################################
+############### CODE SYNTAX
+###################################################
+
+# Exceptions are used (via Carp), so this is unnecessary
+[-ErrorHandling::RequireCheckingReturnValueOfEval]
+
+# Checking the return status of each print call is tedious
+[InputOutput::RequireCheckedSyscalls]
+functions = :builtins
+exclude_functions = print printf
+
+# I don't see anything wrong with postfix controls or unless blocks
+[-ControlStructures::ProhibitPostfixControls]
+[-ControlStructures::ProhibitUnlessBlocks]
+
+# I think the opposite; parantheses help keep parameters together and
+# reduce confusion. Removing them is dangerous in expressions like:
+#   open FILE, $filename or die()
+[-CodeLayout::ProhibitParensWithBuiltins]
+
+###################################################
+############### CODE FORMATTING
+###################################################
+
+[CodeLayout::ProhibitHardTabs]
+allow_leading_tabs = 0
+
+# I don't like the perltidy style
+[-CodeLayout::RequireTidyCode]
+
+# Not sure why /x and /m should be "required"
+[-RegularExpressions::RequireExtendedFormatting]
+[-RegularExpressions::RequireLineBoundaryMatching]
+
+# I don't think anything's wrong with punctuation variables
+[-Variables::ProhibitPunctuationVars]
+
+# Magic numbers are bad, but I'm trusting myself to document them
+# appropriately (unless, of course, they are obvious)
+[-ValuesAndExpressions::ProhibitMagicNumbers]
+
+###################################################
+############### DOCUMENTATION
+###################################################
+
+# Ensure that appropriate POD sections exist
+[Documentation::RequirePodSections]
+lib_sections    = NAME|DESCRIPTION|SYNOPSIS|AUTHOR|COPYRIGHT
+script_sections = NAME|DESCRIPTION|SYNOPSIS|AUTHOR|COPYRIGHT
+
+# This restriction is silly; some measure of performance gain is not worth
+# isolating the documentation from the code it documents.
+[-Documentation::RequirePodAtEnd]
+
+# Ensure that each file is tagged with an Id
+[Miscellanea::RequireRcsKeywords]
+keywords = Id
