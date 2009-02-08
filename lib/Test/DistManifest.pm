@@ -40,8 +40,8 @@ By default, this module exports the following functions:
 =cut
 
 # File management commands
-use Cwd 'getcwd';
-use File::Spec; # Portability
+use Cwd ();
+use File::Spec (); # Portability
 use File::Find (); # Traverse the filesystem tree
 
 use Module::Manifest ();
@@ -121,7 +121,7 @@ sub manifest_ok {
   my $manifile = shift || 'MANIFEST';
   my $skipfile = shift || 'MANIFEST.SKIP';
 
-  my $root = getcwd(); # the regular expression is Build.PL's Cwd
+  my $root = Cwd::getcwd(); # this is Build.PL's Cwd
   my $manifest = Module::Manifest->new;
 
   unless ($test->has_plan) {
