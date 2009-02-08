@@ -13,7 +13,7 @@ use warnings;
 
 use Test::Builder::Tester tests => 8; # The sum of all subtests
 use Test::DistManifest;
-use Test::NoWarnings;
+use Test::NoWarnings; # 1 test
 
 # This one is already tested as part of 02manifest.t
 #manifest_ok();

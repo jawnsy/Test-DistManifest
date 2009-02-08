@@ -26,4 +26,5 @@ if ($@) {
 
 my $rcfile = File::Spec->catfile('t', '01critic.rc');
 Test::Perl::Critic->import(-profile => $rcfile);
+
 all_critic_ok();
