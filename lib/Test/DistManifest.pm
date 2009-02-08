@@ -125,7 +125,7 @@ sub manifest_ok {
   my $manifest = Module::Manifest->new;
 
   unless ($test->has_plan) {
-    $test->plan(tests => 4);
+    $test->plan(tests => 5);
   }
 
   # Try to parse the MANIFEST and MANIFEST.SKIP files
@@ -190,9 +190,17 @@ sub manifest_ok {
 
   # Reset the flag and test $manifest->files now
   $flag = 1;
+  my @circular = (); # for detecting circular logic
   foreach my $path ($manifest->files) {
     # Skip the path if it was seen twice (the expected condition)
     next if ($seen{$path} == 2);
+
+    # If the file should exist but is passed by MANIFEST.SKIP, we have
+    # a strange circular logic condition.
+    if ($manifest->skipped($path)) {
+      push (@circular, $path);
+      next;
+    }
 
     # Oh no, we have files in $manifest->files not in @files
     if ($flag == 1) {
@@ -203,12 +211,22 @@ sub manifest_ok {
   }
   $test->ok($flag, 'All files listed in MANIFEST exist on disk');
 
+  # Test for circular dependencies
+  $flag = (scalar @circular == 0) ? 1 : 0;
+  if (not $flag) {
+    $test->diag('MANIFEST and MANIFEST.SKIP have circular dependencies:');
+    foreach my $path (@circular) {
+      $test->diag($path);
+    }
+  }
+  $test->ok($flag, 'No files are in both MANIFEST and MANIFEST.SKIP');
+
   return;
 }
 
 =head1 GUTS
 
-This module internally plans 3 tests:
+This module internally plans 5 tests:
 
 =over
 
@@ -230,6 +248,12 @@ Check which files are specified in B<MANIFEST> but do not exist on the disk.
 This usually occurs when one deletes a test or similar script from the
 distribution, or accidentally moves it.
 
+=item 4
+
+Check which files are specified in both B<MANIFEST> and B<MANIFEST.SKIP>. This
+is clearly an unsatisfiable condition, since the file in question cannot be
+expected to be included while also simultaneously ignored.
+
 =back
 
 If you want to run tests on multiple different MANIFEST files, you can simply
@@ -249,8 +273,8 @@ future.
 
 Example code:
 
-  use Test::DistManifest tests => 4;
-  manifest_ok(); # 3 tests
+  use Test::DistManifest tests => 5;
+  manifest_ok(); # 4 tests
   ok(1, 'is 1 true?');
 
 =head1 AUTHOR
@@ -267,6 +291,10 @@ Your name here ;-)
 
 =item * Thanks to Adam Kennedy E<lt>adamk@cpan.orgE<gt>, developer of
 Module::Manifest, which is used in this module.
+
+=item * Thanks to Apocalypse E<lt>apocal@cpan.orgE<gt>, for helping me track
+down an obscure bug caused by circular dependencies: when files are expected
+by B<MANIFEST> but explictly skipped by B<MANIFEST.SKIP>.
 
 =back
 
