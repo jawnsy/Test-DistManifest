@@ -300,7 +300,22 @@ L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Dist-Manifest>
 
 L<http://cpants.perl.org/dist/overview/Test-DistManifest>
 
+=item * Test::DistManifest's Subversion repository
+
+L<http://svn.ali.as/cpan/trunk/Test-DistManifest>
+
 =back
+
+=head1 REPOSITORY
+
+You can access the most recent development version of this module at:
+
+L<http://svn.ali.as/cpan/trunk/Test-DistManifest>
+
+If you are a CPAN developer and would like to make modifications to the code
+base, please contact Adam Kennedy E<lt>adamk@cpan.orgE<gt>, the repository
+administrator. I only ask that you contact me first to discuss the changes you
+wish to make to the distribution.
 
 =head1 FEEDBACK
 

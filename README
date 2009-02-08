@@ -121,6 +121,17 @@ SUPPORT
 
         <http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Dist-Manifest>
 
+REPOSITORY
+
+    You can access the most recent development version of this module at:
+
+    L<http://svn.ali.as/cpan/trunk/Test-DistManifest>
+
+    If you are a CPAN developer and would like to make modifications to the
+    code base, please contact Adam Kennedy E<lt>adamk@cpan.orgE<gt>, the
+    repository administrator. I only ask that you contact me first to discuss
+    the changes you wish to make to the distribution.
+
 FEEDBACK
     Please send relevant comments, rotten tomatoes and suggestions directly
     to the maintainer noted above.
