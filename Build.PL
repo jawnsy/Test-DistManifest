@@ -72,7 +72,7 @@ my $builder = Module::Build->new(
       Ratings      => 'http://cpanratings.perl.org/d/Test-DistManifest',
 
       # Official keys (homepage, license, bugtracker)
-      #repository   => 'svn://.. to be added',
+      repository   => 'http://svn.ali.as/cpan/trunk/Test-DistManifest',
       bugtracker   => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-DistManifest',
       license      => 'http://dev.perl.org/licenses/',
     },
