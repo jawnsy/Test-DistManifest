@@ -21,11 +21,11 @@ exists, excluding those in your MANIFEST.SKIP
 
 =head1 VERSION
 
-Version 1.1 ($Id$)
+Version 1.1.0 ($Id$)
 
 =cut
 
-use version; our $VERSION = qv('1.1');
+use version; our $VERSION = qv('1.1.0');
 
 =head1 EXPORTS
 
@@ -383,7 +383,7 @@ This module has not been tested very thoroughly with Unicode.
 
 =head1 LICENSE
 
-Copyright (C) 2008 by Jonathan Yu <frequency@cpan.org>
+Copyright (C) 2008-2009 by Jonathan Yu <frequency@cpan.org>
 
 This package is distributed under the same terms as Perl itself. At time of
 writing, this means that you are entitled to enjoy the covenants of, at your

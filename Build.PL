@@ -21,6 +21,7 @@ my $builder = Module::Build->new(
   create_readme         => 1,
   recursive_test_files  => 1,
   sign                  => 1,
+  create_packlist       => 1,
 
   # Maintain compatibility with ExtUtils::MakeMaker installations
   create_makefile_pl    => 'traditional',
