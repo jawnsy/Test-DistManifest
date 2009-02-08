@@ -41,5 +41,5 @@ provides:
     version: 1.001000
 generated_by: Module::Build version 0.3
 meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
