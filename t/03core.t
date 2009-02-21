@@ -73,7 +73,7 @@ test_out('ok 3 - All files are listed in MANIFEST or skipped');
 test_out('ok 4 - All files listed in MANIFEST exist on disk');
 test_out('not ok 5 - No files are in both MANIFEST and MANIFEST.SKIP');
 test_fail(+1);
-manifest_ok('MANIFEST', 'MANIFEST.SKIP.CIRCULAR');
+manifest_ok('MANIFEST', 'CIRCULAR.SKIP');
 test_test(
   name        => 'Fails when files are in both MANIFEST and MANIFEST.SKIP',
   skip_err    => 1,
