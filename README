@@ -3,7 +3,7 @@ NAME
     as it exists, excluding those in your MANIFEST.SKIP
 
 VERSION
-    Version 1.0 ($Id$)
+    Version 1.1.0 ($Id$)
 
 EXPORTS
     By default, this module exports the following functions:
