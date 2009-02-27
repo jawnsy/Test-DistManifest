@@ -27,10 +27,10 @@ my $builder = Module::Build->new(
   create_makefile_pl    => 'traditional',
 
   requires => {
-    'perl'              => '5.006',
+    'perl'              => 5.006,
 
     # Pragmatic and special modules
-    'Carp'              => '1.04',
+    'Carp'              => 1.04,
     'version'           => 0,
     'warnings'          => 0,
     'strict'            => 0,
@@ -41,25 +41,26 @@ my $builder = Module::Build->new(
     'File::Find'        => 0,
 
     # The tests are based on Test::More
-    'Test::More'        => '0.62',
-    'Test::Builder'     => '0.86',
+    'Test::More'        => 0.62,
+    'Test::Builder'     => 0.86,
 
     # Other modules
-    'Module::Manifest'  => '0.05',
+    'Module::Manifest'  => 0.05,
   },
   build_requires => {
     # User tests for good functionality
     'Test::Builder::Tester'   => 0,
-    'Test::NoWarnings'        => '0.084',
+    'Test::NoWarnings'        => 0.084,
   },
   recommends => {
     # Author tests
     'Test::Perl::Critic'      => 0,
+    'Perl::Critic'            => 1.096,
     'Test::YAML::Meta'        => 0,
-    'Test::Kwalitee'          => '1.01',
+    'Test::Kwalitee'          => 1.01,
     'Test::Signature'         => 0,
-    'Test::Pod'               => '1.14',
-    'Test::Pod::Coverage'     => '1.04',
+    'Test::Pod'               => 1.14,
+    'Test::Pod::Coverage'     => 1.04,
   },
   conflicts => {
   },
