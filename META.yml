@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Test-DistManifest
-version: 1.001000
+version: 1.001001
 author:
   - 'Jonathan Yu <frequency@cpan.org>'
 abstract: |-
