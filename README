@@ -3,7 +3,7 @@ NAME
     as it exists, excluding those in your MANIFEST.SKIP
 
 VERSION
-    Version 1.1.1 ($Id$)
+    Version 1.1.2 ($Id$)
 
 EXPORTS
     By default, this module exports the following functions:
@@ -157,7 +157,7 @@ CAVEATS
     *   This module has not been tested very thoroughly with Unicode.
 
 COPYRIGHT
-    Copyright (C) 2008 by Jonathan Yu <frequency@cpan.org>
+    Copyright (C) 2008-2009 by Jonathan Yu <frequency@cpan.org>
 
   LICENSE
     This package is distributed under a triple licensing scheme. You are
