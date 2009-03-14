@@ -294,7 +294,7 @@ Module::Manifest, which is used in this module.
 
 =item * Thanks to Apocalypse E<lt>apocal@cpan.orgE<gt>, for helping me track
 down an obscure bug caused by circular dependencies: when files are expected
-by B<MANIFEST> but explictly skipped by B<MANIFEST.SKIP>.
+by MANIFEST but explictly skipped by MANIFEST.SKIP.
 
 =back
 
@@ -385,22 +385,9 @@ This module has not been tested very thoroughly with Unicode.
 
 Copyright (C) 2008-2009 by Jonathan Yu <frequency@cpan.org>
 
-This package is distributed under the same terms as Perl itself. At time of
-writing, this means that you are entitled to enjoy the covenants of, at your
-option:
-
-=over
-
-=item 1
-
-The Free Software Foundation's GNU General Public License (GPL), version 2 or
-later; or
-
-=item 2
-
-The Perl Foundation's Artistic License, version 2.0 or later
-
-=back
+This package is distributed under the same terms as Perl itself. Please see
+the LICENSE file included in this distribution for full details of these
+terms.
 
 =head1 DISCLAIMER OF WARRANTY
 

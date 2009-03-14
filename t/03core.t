@@ -6,7 +6,9 @@
 #
 # $Id$
 #
-# This test script is hereby released into the public domain.
+# All rights to this test script are hereby disclaimed and its contents
+# released into the public domain by the author. Where this is not possible,
+# you may use this file under the same terms as Perl itself.
 
 use strict;
 use warnings;
