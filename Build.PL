@@ -56,13 +56,15 @@ my $builder = Module::Build->new(
   },
   recommends => {
     # Author tests
-    'Test::Perl::Critic'      => 0,
-    'Perl::Critic'            => 1.096,
-    'Test::YAML::Meta'        => 0,
-    'Test::Kwalitee'          => 1.01,
-    'Test::Signature'         => 0,
-    'Test::Pod'               => 1.14,
-    'Test::Pod::Coverage'     => 1.04,
+    'Test::Perl::Critic'        => 1.01,
+    'Perl::Critic'              => 1.096,
+    'Test::YAML::Meta'          => 0.11,
+    'Test::Kwalitee'            => 1.01,
+    'Test::Signature'           => 1.10,
+    'Test::Pod'                 => 1.14,
+    'Test::Pod::Coverage'       => 1.04,
+    'Test::Prereq::Build'       => 1.036,
+    'Test::Portability::Files'  => 0.05,
   },
   conflicts => {
   },

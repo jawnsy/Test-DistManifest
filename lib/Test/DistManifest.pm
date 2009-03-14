@@ -76,6 +76,26 @@ sub import {
 This module provides a simple method of testing that a MANIFEST matches the
 distribution.
 
+It tests three things:
+
+=over
+
+=item 1
+
+Everything in B<MANIFEST> exists
+
+=item 2
+
+Everything in the package is listed in B<MANIFEST>, or subsequently matches a
+regular expression mask in B<MANIFEST.SKIP>
+
+=item 3
+
+Nothing exists in B<MANIFEST> that also matches a mask in B<MANIFEST.SKIP>,
+so as to avoid an unsatisfiable dependency conditions
+
+=back
+
 =head1 SYNOPSIS
 
   use Test::More;
@@ -378,6 +398,12 @@ files actually exist on disk. I am planning for this to change in the future.
 =item *
 
 This module has not been tested very thoroughly with Unicode.
+
+=item *
+
+This module does not produce any useful diagnostic messages in terms of how
+to correct the situation. Hopefully this will be obvious for anybody using
+the module; the emphasis should be on generating helpful error messages.
 
 =back
 
