@@ -1,8 +1,7 @@
 #!/usr/bin/perl -T
 
-# t/02manifest-explicit.t
-#  Ensures MANIFEST file is up-to-date, when the files are specified
-#  explicitly.
+# t/03core.t
+#  Ensures the MANIFEST test output looks reasonable.
 #
 # $Id$
 #

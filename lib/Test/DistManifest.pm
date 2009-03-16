@@ -175,7 +175,7 @@ sub manifest_ok {
     # Portably deal with different OSes
     unless (File::Spec->isa('File::Spec::Unix')) {
       # Get path info from File::Spec, split apart
-      my (undef, $dir, $file) = File::Spec->splitpath($rel);
+      my (undef, $dir, $file) = File::Spec->splitpath($path);
       my @dir = File::Spec->splitdir($dir);
 
       # Reconstruct the path in Unix-style
