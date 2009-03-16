@@ -12,6 +12,7 @@ WriteMakefile(
     'strict'            => 0,
     'Cwd'               => 0,
     'File::Spec'        => 0,
+    'File::Spec::Unix'  => 0,
     'File::Find'        => 0,
     'Test::More'        => 0.62,
     'Test::Builder'     => 0.86,

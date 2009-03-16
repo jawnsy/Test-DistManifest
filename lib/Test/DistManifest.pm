@@ -172,11 +172,15 @@ sub manifest_ok {
     # Trim off the package root to determine the relative path.
     my $path = File::Spec->abs2rel($File::Find::name, $root);
 
-    # Deal with Win32, which uses backslashes instead of forward
-    # slashes. There must be a portable way of doing this, possibly
-    # using File::Spec. It's probably easiest this way :-)
-    if ($^O eq 'Win32') {
-      $path =~ s!\\!/!g;
+    # Portably deal with different OSes
+    unless (File::Spec->isa('File::Spec::Unix')) {
+      # Get path info from File::Spec, split apart
+      my (undef, $dir, $file) = File::Spec->splitpath($rel);
+      my @dir = File::Spec->splitdir($dir);
+
+      # Reconstruct the path in Unix-style
+      $dir = File::Spec::Unix->catdir(@dir);
+      $path = File::Spec::Unix->catpath(undef, $dir, $file);
     }
 
     # Test that the path is a file and then make sure it's not skipped

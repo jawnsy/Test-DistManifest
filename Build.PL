@@ -40,6 +40,7 @@ my $builder = Module::Build->new(
     # File manipulation modules
     'Cwd'               => 0,
     'File::Spec'        => 0,
+    'File::Spec::Unix'  => 0,
     'File::Find'        => 0,
 
     # The tests are based on Test::More
