@@ -35,7 +35,6 @@ recommends:
   Test::Pod::Coverage: 1.04
   Test::Signature: 1.10
   Test::YAML::Meta: 0.11
-  Test::Prereq::Build: 1.036
   Test::Portability::Files: 0.05
   Test::MinimumVersion: 0.008
 dynamic_config: 0

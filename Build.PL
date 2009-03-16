@@ -64,7 +64,6 @@ my $builder = Module::Build->new(
     'Test::Signature'           => 1.10,
     'Test::Pod'                 => 1.14,
     'Test::Pod::Coverage'       => 1.04,
-    'Test::Prereq::Build'       => 1.036,
     'Test::Portability::Files'  => 0.05,
     'Test::MinimumVersion'      => 0.008,
   },
