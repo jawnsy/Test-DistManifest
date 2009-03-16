@@ -54,6 +54,19 @@ my @EXPORTS = (
   'manifest_ok',
 );
 
+# These platforms were copied from File::Spec
+my %platforms = (
+  MacOS   => 1,
+  MSWin32 => 1,
+  os2     => 1,
+  VMS     => 1,
+  epoc    => 1,
+  NetWare => 1,
+  symbian => 1,
+  dos     => 1,
+  cygwin  => 1,
+);
+
 # Looking at other Test modules this seems to be an ad-hoc standard
 sub import {
   my ($self, @plan) = @_;
@@ -173,7 +186,7 @@ sub manifest_ok {
     my $path = File::Spec->abs2rel($File::Find::name, $root);
 
     # Portably deal with different OSes
-    unless (File::Spec->isa('File::Spec::Unix')) {
+    if ($platforms{$^O}) { # Check if we are on a non-Unix platform
       # Get path info from File::Spec, split apart
       my (undef, $dir, $file) = File::Spec->splitpath($path);
       my @dir = File::Spec->splitdir($dir);
