@@ -21,11 +21,11 @@ exists, excluding those in your MANIFEST.SKIP
 
 =head1 VERSION
 
-Version 1.1.2 ($Id$)
+Version 1.1.3 ($Id$)
 
 =cut
 
-use version; our $VERSION = qv('1.1.2');
+use version; our $VERSION = qv('1.1.3');
 
 =head1 EXPORTS
 
@@ -42,6 +42,7 @@ By default, this module exports the following functions:
 # File management commands
 use Cwd ();
 use File::Spec (); # Portability
+use File::Spec::Unix (); # To get UNIX-style paths
 use File::Find (); # Traverse the filesystem tree
 
 use Module::Manifest ();
@@ -170,6 +171,13 @@ sub manifest_ok {
   my $closure = sub {
     # Trim off the package root to determine the relative path.
     my $path = File::Spec->abs2rel($File::Find::name, $root);
+
+    # Deal with Win32, which uses backslashes instead of forward
+    # slashes. There must be a portable way of doing this, possibly
+    # using File::Spec. It's probably easiest this way :-)
+    if ($^O eq 'Win32') {
+      $path =~ s!\\!/!g;
+    }
 
     # Test that the path is a file and then make sure it's not skipped
     if (-f $path && !$manifest->skipped($path)) {
