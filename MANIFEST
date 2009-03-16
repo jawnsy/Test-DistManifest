@@ -21,6 +21,5 @@ t/01min-perl.t
 t/01pod-coverage.t
 t/01pod.t
 t/01portability.t
-t/01prereq.t
 t/02manifest.t
 t/03core.t
