@@ -50,9 +50,9 @@ REPOSITORY
     L<http://svn.ali.as/cpan/trunk/Test-DistManifest>
 
     If you are a CPAN developer and would like to make modifications to the
-    code base, please contact Adam Kennedy E<lt>adamk@cpan.orgE<gt>, the
-    repository administrator. I only ask that you contact me first to discuss
-    the changes you wish to make to the distribution.
+    code base, please contact Adam Kennedy <adamk@cpan.org>, the repository
+    administrator. I only ask that you contact me first to discuss the
+    changes you wish to make to the distribution.
 
 FEEDBACK
     Please send relevant comments, rotten tomatoes and suggestions directly
