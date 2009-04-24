@@ -18,7 +18,7 @@ requires:
   File::Find: 0
   File::Spec: 0
   File::Spec::Unix: 0
-  Module::Manifest: 0.05
+  Module::Manifest: 0.07
   Test::Builder: 0.86
   Test::More: 0.62
   perl: 5.006

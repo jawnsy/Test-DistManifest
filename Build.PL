@@ -26,7 +26,7 @@ my $builder = Module::Build->new(
   create_packlist       => 1,
 
   # Maintain compatibility with ExtUtils::MakeMaker installations
-  create_makefile_pl    => 'traditional',
+  create_makefile_pl    => 'passthrough',
 
   requires => {
     'perl'              => 5.006,
@@ -48,7 +48,7 @@ my $builder = Module::Build->new(
     'Test::Builder'     => 0.86,
 
     # Other modules
-    'Module::Manifest'  => 0.05,
+    'Module::Manifest'  => 0.07,
   },
   build_requires => {
     # User tests for good functionality

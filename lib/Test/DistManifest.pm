@@ -3,7 +3,7 @@
 #
 # $Id$
 #
-# Copyright (C) 2008 by Jonathan Yu <frequency@cpan.org>
+# Copyright (C) 2008-2009 by Jonathan Yu <frequency@cpan.org>
 #
 # This package is distributed with the same licensing terms as Perl itself.
 # For additional information, please read the included `LICENSE' file.
