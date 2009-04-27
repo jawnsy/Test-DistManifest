@@ -31,6 +31,7 @@
 \#$
 \b\.#
 \.bak$
+\.tmp$
 
 # Devel::Cover files.
 \bcover_db\b
