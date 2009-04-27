@@ -21,11 +21,11 @@ exists, excluding those in your MANIFEST.SKIP
 
 =head1 VERSION
 
-Version 1.1.3 ($Id$)
+Version 1.1.4 ($Id$)
 
 =cut
 
-use version; our $VERSION = qv('1.1.3');
+use version; our $VERSION = qv('1.1.4');
 
 =head1 EXPORTS
 
