@@ -1,6 +1,5 @@
 NAME
-    Test::DistManifest - Tests that your MANIFEST matches the distribution
-    as it exists, excluding those in your MANIFEST.SKIP
+    Test::DistManifest - Verify MANIFEST/MANIFEST.SKIP as an author test
 
 $Id$
 
