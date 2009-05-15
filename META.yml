@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Test-DistManifest
-version: 1.002000
+version: 1.002001
 author:
   - 'Jonathan Yu <frequency@cpan.org>'
 abstract: |-
@@ -43,7 +43,7 @@ dynamic_config: 0
 provides:
   Test::DistManifest:
     file: lib/Test/DistManifest.pm
-    version: 1.002000
+    version: 1.002001
 generated_by: Module::Build version 0.3
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
