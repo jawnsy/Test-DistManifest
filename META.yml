@@ -43,7 +43,7 @@ dynamic_config: 0
 provides:
   Test::DistManifest:
     file: lib/Test/DistManifest.pm
-    version: 1.002001
+    version: 1.002002
 generated_by: Module::Build version 0.3
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
