@@ -172,10 +172,15 @@ or from other shell scripts as:
 
   export MANIFEST_WARN_ONLY=1
 
-Note that circular dependencies will always be considered fatal.
+Note that parsing errors in each file (B<MANIFEST> and B<MANIFEST.SKIP>) and
+circular dependencies will always be considered fatal. The author is not aware
+of any other use cases where other behaviour would be useful.
 
 =cut
 
+# It's not the simplest subroutine, but it's still not complex enough nor
+# useful enough in its parts to really be refactored.
+## no critic(ProhibitExcessComplexity)
 sub manifest_ok {
   my $warn_only = $ENV{MANIFEST_WARN_ONLY} || 0;
 
@@ -196,7 +201,7 @@ sub manifest_ok {
   if ($@) {
     $test->diag($!);
   }
-  $test->ok($warn_only or !$@, 'Parse MANIFEST or equivalent');
+  $test->ok(!$@, 'Parse MANIFEST or equivalent');
 
   eval {
     $manifest->open(skip     => $skipfile);
@@ -204,7 +209,7 @@ sub manifest_ok {
   if ($@) {
     $test->diag($!);
   }
-  $test->ok($warn_only or !$@, 'Parse MANIFEST.SKIP or equivalent');
+  $test->ok(!$@, 'Parse MANIFEST.SKIP or equivalent');
 
   my @files;
   # Callback function called by File::Find
@@ -258,7 +263,7 @@ sub manifest_ok {
     }
     $test->diag($path);
   }
-  $test->ok($warn_only or $flag, 'All files are listed in MANIFEST or ' .
+  $test->ok($warn_only || $flag, 'All files are listed in MANIFEST or ' .
     'skipped');
 
   # Reset the flag and test $manifest->files now
@@ -282,7 +287,7 @@ sub manifest_ok {
     }
     $test->diag($path);
   }
-  $test->ok($warn_only or $flag, 'All files listed in MANIFEST exist ',
+  $test->ok($warn_only || $flag, 'All files listed in MANIFEST exist ' .
     'on disk');
 
   # Test for circular dependencies
