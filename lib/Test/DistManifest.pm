@@ -20,11 +20,11 @@ Test::DistManifest - Verify MANIFEST/MANIFEST.SKIP as an author test
 
 =head1 VERSION
 
-Version 1.1.4 ($Id$)
+Version 1.1.5 ($Id$)
 
 =cut
 
-use version; our $VERSION = qv('1.1.4');
+use version; our $VERSION = qv('1.1.5');
 
 =head1 EXPORTS
 
@@ -148,9 +148,37 @@ just a helpful test to remind you to update these files, using:
   $ make dist # For ExtUtils::MakeMaker
   $ ./Build dist # For Module::Build
 
+=head2 Non-Fatal Errors
+
+By default, errors in the B<MANIFEST> or B<MANIFEST.SKIP> files are treated
+as fatal, which really is the purpose of using C<Test::DistManifest> as part
+of your author test suite.
+
+In some cases this is not desirable behaviour, such as with the Debian Perl
+Group, which runs all tests - including author tests - as part of its module
+packaging process. This wreaks havoc because Debian adds its control files
+in C<debian/> downstream, and that directory or its files are generally not
+in B<MANIFEST.SKIP>.
+
+By setting the environment variable B<MANIFEST_WARN_ONLY> to a true value,
+errors will be non-fatal - they show up as diagnostic messages only, but all
+tests pass from the perspective of C<Test::Harness>.
+
+This can be used in a test script as:
+
+  $ENV{MANIFEST_WARN_ONLY} = 1;
+
+or from other shell scripts as:
+
+  export MANIFEST_WARN_ONLY=1
+
+Note that circular dependencies will always be considered fatal.
+
 =cut
 
 sub manifest_ok {
+  my $warn_only = $ENV{MANIFEST_WARN_ONLY} || 0;
+
   my $manifile = shift || 'MANIFEST';
   my $skipfile = shift || 'MANIFEST.SKIP';
 
@@ -168,7 +196,7 @@ sub manifest_ok {
   if ($@) {
     $test->diag($!);
   }
-  $test->ok(!$@, 'Parse MANIFEST or equivalent');
+  $test->ok($warn_only or !$@, 'Parse MANIFEST or equivalent');
 
   eval {
     $manifest->open(skip     => $skipfile);
@@ -176,7 +204,7 @@ sub manifest_ok {
   if ($@) {
     $test->diag($!);
   }
-  $test->ok(!$@, 'Parse MANIFEST.SKIP or equivalent');
+  $test->ok($warn_only or !$@, 'Parse MANIFEST.SKIP or equivalent');
 
   my @files;
   # Callback function called by File::Find
@@ -230,7 +258,8 @@ sub manifest_ok {
     }
     $test->diag($path);
   }
-  $test->ok($flag, 'All files are listed in MANIFEST or skipped');
+  $test->ok($warn_only or $flag, 'All files are listed in MANIFEST or ' .
+    'skipped');
 
   # Reset the flag and test $manifest->files now
   $flag = 1;
@@ -253,7 +282,8 @@ sub manifest_ok {
     }
     $test->diag($path);
   }
-  $test->ok($flag, 'All files listed in MANIFEST exist on disk');
+  $test->ok($warn_only or $flag, 'All files listed in MANIFEST exist ',
+    'on disk');
 
   # Test for circular dependencies
   $flag = (scalar @circular == 0) ? 1 : 0;
