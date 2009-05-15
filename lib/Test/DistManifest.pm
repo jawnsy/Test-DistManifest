@@ -174,7 +174,7 @@ or from other shell scripts as:
 
 Note that parsing errors in each file (B<MANIFEST> and B<MANIFEST.SKIP>) and
 circular dependencies will always be considered fatal. The author is not aware
-of any other use cases where other behaviour would be useful.
+of any cases where other behaviour would be useful.
 
 =cut
 
