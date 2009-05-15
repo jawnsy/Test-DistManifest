@@ -13,6 +13,7 @@ MANIFEST\.SKIP
 
 # Module::Build generated files and dirs.
 ^Build$
+^Build\.bat$
 ^_build/
 
 # Module::Install included files.
@@ -33,6 +34,7 @@ MANIFEST\.SKIP
 \#$
 \b\.#
 \.bak$
+\.tmp$
 
 # Devel::Cover files.
 \bcover_db\b
