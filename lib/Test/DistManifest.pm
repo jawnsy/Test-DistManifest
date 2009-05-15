@@ -20,11 +20,11 @@ Test::DistManifest - Verify MANIFEST/MANIFEST.SKIP as an author test
 
 =head1 VERSION
 
-Version 1.2.1 ($Id$)
+Version 1.2.2 ($Id$)
 
 =cut
 
-use version; our $VERSION = qv('1.2.1');
+use version; our $VERSION = qv('1.2.2');
 
 =head1 EXPORTS
 
