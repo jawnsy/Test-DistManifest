@@ -407,10 +407,6 @@ L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Dist-Manifest>
 
 L<http://cpants.perl.org/dist/overview/Test-DistManifest>
 
-=item * Test::DistManifest's Subversion repository
-
-L<http://svn.ali.as/cpan/trunk/Test-DistManifest>
-
 =back
 
 =head1 REPOSITORY
