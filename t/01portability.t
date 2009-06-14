@@ -37,7 +37,7 @@ options(
   test_dir_noext      => 1,
   test_dos_length     => 0,
   test_mac_length     => 1,
-  test_one_dot        => 1,
+  test_one_dot        => 0,
   test_space          => 1,
   test_special_chars  => 1,
   test_symlink        => 1,
