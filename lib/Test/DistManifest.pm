@@ -72,7 +72,7 @@ sub import {
   my $caller = caller;
 
   {
-    ## no critic (ProhibitNoStrict, ProhibitNoisyQuotes)
+    ## no critic (ProhibitNoStrict)
     no strict 'refs';
     for my $func (@EXPORTS) {
       *{$caller . '::' . $func} = \&{$func};
