@@ -3,6 +3,8 @@
 # t/01min-perl.t
 #  Tests that the minimum required Perl version matches META.yml
 #
+# By Jonathan Yu <frequency@cpan.org>, 2008-2009. All rights reversed.
+#
 # $Id$
 #
 # All rights to this test script are hereby disclaimed and its contents

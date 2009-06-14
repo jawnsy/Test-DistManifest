@@ -3,6 +3,8 @@
 # t/01meta.t
 #  Tests that the META.yml meets the specification
 #
+# By Jonathan Yu <frequency@cpan.org>, 2008-2009. All rights reversed.
+#
 # $Id$
 #
 # All rights to this test script are hereby disclaimed and its contents

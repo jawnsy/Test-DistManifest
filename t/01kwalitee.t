@@ -3,6 +3,8 @@
 # t/01kwalitee.t
 #  Uses the CPANTS Kwalitee metrics to test the distribution
 #
+# By Jonathan Yu <frequency@cpan.org>, 2008-2009. All rights reversed.
+#
 # $Id$
 #
 # All rights to this test script are hereby disclaimed and its contents

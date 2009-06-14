@@ -3,8 +3,7 @@ name: Test-DistManifest
 version: 1.002002
 author:
   - 'Jonathan Yu <frequency@cpan.org>'
-abstract: |-
-  Verify MANIFEST/MANIFEST.SKIP as an author test
+abstract: Verify MANIFEST/MANIFEST.SKIP as an author test
 license: perl
 resources:
   Ratings: http://cpanratings.perl.org/d/Test-DistManifest

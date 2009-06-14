@@ -3,6 +3,8 @@
 # t/01pod.t
 #  Checks that POD commands are correct
 #
+# By Jonathan Yu <frequency@cpan.org>, 2008-2009. All rights reversed.
+#
 # $Id$
 #
 # All rights to this test script are hereby disclaimed and its contents

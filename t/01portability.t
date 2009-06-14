@@ -3,6 +3,8 @@
 # t/01portability.t
 #  Tests if the distribution seems to be portable
 #
+# By Jonathan Yu <frequency@cpan.org>, 2008-2009. All rights reversed.
+#
 # $Id$
 #
 # All rights to this test script are hereby disclaimed and its contents

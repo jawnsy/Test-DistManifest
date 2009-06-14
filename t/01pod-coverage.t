@@ -3,6 +3,8 @@
 # t/01pod-coverage.t
 #  Ensures all subroutines are documented with POD
 #
+# By Jonathan Yu <frequency@cpan.org>, 2008-2009. All rights reversed.
+#
 # $Id$
 #
 # All rights to this test script are hereby disclaimed and its contents
