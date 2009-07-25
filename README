@@ -1,99 +1,48 @@
-NAME
-    Test::DistManifest - Verify MANIFEST/MANIFEST.SKIP as an author test
-
 $Id$
 
-DESCRIPTION
-    This module provides a simple method of testing that a MANIFEST matches
-    the distribution.
+Test::DistManifest is an author test that validates a package MANIFEST
 
-COMPATIBILITY
-    This module was tested under Perl 5.10.0, using Debian Linux. However,
-    because it's Pure Perl and doesn't do anything too obscure, it should be
-    compatible with any version of Perl that supports its prerequisite
-    modules.
+Copyright 2008-2009 by Jonathan Yu <frequency@cpan.org>. All rights reserved.
 
-    If you encounter any problems on a different version or architecture,
-    please contact the maintainer.
+INSTALLATION
 
-AUTHOR
-    Jonathan Yu <frequency@cpan.org>
+  This module depends on Module::Build for its installation mechanism.
 
-SUPPORT
-    You can find documentation for this module with the perldoc command.
+  To install this module type the following:
+  $ perl Build.PL
+  $ perl Build
+  $ perl Build test
+  $ perl Build install
 
-        perldoc Test::DistManifest
+  Module::Build will complain if any dependencies are missing, or if
+  you can install some other modules to enhance its functionality.
 
-    You can also look for information at:
+USAGE AND DOCUMENTATION
 
-    *   AnnoCPAN: Annotated CPAN documentation
+  In order to use the module, you'll probably need the documentation.
+  Once installed, you can read that using:
+  $ perldoc Test::DistManifest
 
-        <http://annocpan.org/dist/Test-Dist-Manifest>
+COPYRIGHT AND LICENCE
+  This package is distributed with the same licensing terms as Perl
+  itself. At time of writing, this consists of a dual licensing scheme.
+  You are entitled to enjoy the covenants of, at your option:
 
-    *   CPAN Ratings
+  (1) The Free Software Foundation's GNU General Public License, version 
+      1 or later; or
 
-        <http://cpanratings.perl.org/d/Test-Dist-Manifest>
+  (2) The Artistic License, version 1.0 or later
 
-    *   Search CPAN
+  This software is provided by the copyright holders and contributors
+  "AS IS" and ANY EXPRESS OR IMPLIED WARRANTIES, including, but not
+  limited to, the IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
 
-        <http://search.cpan.org/dist/Test-Dist-Manifest>
-
-    *   CPAN Request Tracker
-
-        <http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Dist-Manifest>
-
-REPOSITORY
-
-    You can access the most recent development version of this module at:
-
-    L<http://svn.ali.as/cpan/trunk/Test-DistManifest>
-
-    If you are a CPAN developer and would like to make modifications to the
-    code base, please contact Adam Kennedy <adamk@cpan.org>, the repository
-    administrator. I only ask that you contact me first to discuss the
-    changes you wish to make to the distribution.
-
-FEEDBACK
-    Please send relevant comments, rotten tomatoes and suggestions directly
-    to the maintainer noted above.
-
-    If you have a bug report or feature request, please file them on the
-    CPAN Request Tracker at <http://rt.cpan.org>. If you are able to submit
-    your bug report in the form of failing unit tests, you are strongly
-    encouraged to do so. Regular bug reports are always accepted and
-    appreciated via the CPAN bug tracker.
-
-SEE ALSO
-    Test::CheckManifest, a module providing similar functionality
-
-CAVEATS
-  KNOWN BUGS
-    There are no known bugs as of this release.
-
-  LIMITATIONS
-    *   There is currently no way to test a MANIFEST/MANIFEST.SKIP without
-        having the files actually exist on disk. I am planning for this to
-        change in the future.
-
-    *   This module has not been tested very thoroughly with Unicode.
-
-COPYRIGHT
-    Copyright (C) 2008-2009 by Jonathan Yu <frequency@cpan.org>
-
-  LICENSE
-    This package is distributed under the same terms as Perl itself.
-
-DISCLAIMER OF WARRANTY
-    This software is provided by the copyright holders and contributors "AS
-    IS" and ANY EXPRESS OR IMPLIED WARRANTIES, including, but not limited
-    to, the IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
-    PARTICULAR PURPOSE ARE DISCLAIMED.
-
-    In no event shall the copyright owner or contributors be liable for any
-    direct, indirect, incidental, special, exemplary or consequential
-    damages (including, but not limited to, procurement of substitute goods
-    or services; loss of use, data or profits; or business interruption)
-    however caused and on any theory of liability, whether in contract,
-    strict liability or tort (including negligence or otherwise) arising in
-    any way out of the use of this software, even if advised of the
-    possibility of such damage.
+  In no event shall the copyright owner or contributors be liable for 
+  any direct, indirect, incidental, special, exemplary or consequential 
+  damages (including, but not limited to, procurement of substitute
+  goods or services; loss of use, data or profits; or business
+  interruption) however caused and on any theory of liability, whether
+  in contract, strict liability or tort (including negligence or
+  otherwise) arising in any way out of the use of this software, even
+  if advised of the possibility of such damage. 

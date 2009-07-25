@@ -16,7 +16,7 @@ use Carp ();
 
 =head1 NAME
 
-Test::DistManifest - Verify MANIFEST/MANIFEST.SKIP as an author test
+Test::DistManifest - Author test that validates a package MANIFEST
 
 =head1 VERSION
 
@@ -172,9 +172,9 @@ or from other shell scripts as:
 
   export MANIFEST_WARN_ONLY=1
 
-Note that parsing errors in each file (B<MANIFEST> and B<MANIFEST.SKIP>) and
-circular dependencies will always be considered fatal. The author is not aware
-of any cases where other behaviour would be useful.
+Note that parsing errors in each file (B<MANIFEST> and B<MANIFEST.SKIP>)
+and circular dependencies will always be considered fatal. The author is
+not aware of any cases where other behaviour would be useful.
 
 =cut
 
@@ -329,14 +329,14 @@ distribution, or accidentally moves it.
 
 =item 4
 
-Check which files are specified in both B<MANIFEST> and B<MANIFEST.SKIP>. This
-is clearly an unsatisfiable condition, since the file in question cannot be
-expected to be included while also simultaneously ignored.
+Check which files are specified in both B<MANIFEST> and B<MANIFEST.SKIP>.
+This is clearly an unsatisfiable condition, since the file in question
+cannot be expected to be included while also simultaneously ignored.
 
 =back
 
-If you want to run tests on multiple different MANIFEST files, you can simply
-pass 'no_plan' to the import function, like so:
+If you want to run tests on multiple different MANIFEST files, you can
+simply pass 'no_plan' to the import function, like so:
 
   use Test::DistManifest 'no_plan';
 
@@ -346,9 +346,9 @@ pass 'no_plan' to the import function, like so:
   manifest_ok('MANIFEST.OTHER', 'MANIFEST.SKIP');
 
 I doubt this will be useful to users of this module. However, this is used
-internally for testing and it might be helpful to you. You can also plan more
-tests, but keep in mind that the idea of "3 internal tests"  may change in the
-future.
+internally for testing and it might be helpful to you. You can also plan
+more tests, but keep in mind that the idea of "3 internal tests" may change
+in the future.
 
 Example code:
 
@@ -371,9 +371,9 @@ Your name here ;-)
 =item * Thanks to Adam Kennedy E<lt>adamk@cpan.orgE<gt>, developer of
 Module::Manifest, which is used in this module.
 
-=item * Thanks to Apocalypse E<lt>apocal@cpan.orgE<gt>, for helping me track
-down an obscure bug caused by circular dependencies: when files are expected
-by MANIFEST but explictly skipped by MANIFEST.SKIP.
+=item * Thanks to Apocalypse E<lt>apocal@cpan.orgE<gt>, for helping me
+track down an obscure bug caused by circular dependencies: when files are
+expected by MANIFEST but explictly skipped by MANIFEST.SKIP.
 
 =back
 
@@ -415,20 +415,20 @@ You can access the most recent development version of this module at:
 
 L<http://svn.ali.as/cpan/trunk/Test-DistManifest>
 
-If you are a CPAN developer and would like to make modifications to the code
-base, please contact Adam Kennedy E<lt>adamk@cpan.orgE<gt>, the repository
-administrator. I only ask that you contact me first to discuss the changes you
-wish to make to the distribution.
+If you are a CPAN developer and would like to make modifications to the
+code base, please contact Adam Kennedy E<lt>adamk@cpan.orgE<gt>, the
+repository administrator. I only ask that you contact me first to discuss
+the changes you wish to make to the distribution.
 
 =head1 FEEDBACK
 
-Please send relevant comments, rotten tomatoes and suggestions directly to the
-maintainer noted above.
+Please send relevant comments, rotten tomatoes and suggestions directly to
+the maintainer noted above.
 
 If you have a bug report or feature request, please file them on the CPAN
-Request Tracker at L<http://rt.cpan.org>. If you are able to submit your bug
-report in the form of failing unit tests, you are B<strongly> encouraged to do
-so.
+Request Tracker at L<http://rt.cpan.org>. If you are able to submit your
+bug report in the form of failing unit tests, you are B<strongly> encouraged
+to do so.
 
 =head1 SEE ALSO
 
@@ -465,24 +465,25 @@ the module; the emphasis should be on generating helpful error messages.
 
 Copyright (C) 2008-2009 by Jonathan Yu <frequency@cpan.org>
 
-This package is distributed under the same terms as Perl itself. Please see
-the LICENSE file included in this distribution for full details of these
-terms.
+This package is distributed under the same terms as Perl itself. Please
+see the F<LICENSE> file included in this distribution for full details of
+these terms.
 
 =head1 DISCLAIMER OF WARRANTY
 
-This software is provided by the copyright holders and contributors "AS IS"
-and ANY EXPRESS OR IMPLIED WARRANTIES, including, but not limited to, the
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED.
+This software is provided by the copyright holders and contributors 
+"AS IS" and ANY EXPRESS OR IMPLIED WARRANTIES, including, but not 
+limited to, the IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR 
+A PARTICULAR PURPOSE ARE DISCLAIMED. 
 
-In no event shall the copyright owner or contributors be liable for any
-direct, indirect, incidental, special, exemplary or consequential damages
-(including, but not limited to, procurement of substitute goods or services;
-loss of use, data or profits; or business interruption) however caused and on
-any theory of liability, whether in contract, strict liability or tort
-(including negligence or otherwise) arising in any way out of the use of this
-software, even if advised of the possibility of such damage.
+In no event shall the copyright owner or contributors be liable for 
+any direct, indirect, incidental, special, exemplary or consequential 
+damages (including, but not limited to, procurement of substitute 
+goods or services; loss of use, data or profits; or business 
+interruption) however caused and on any theory of liability, whether 
+in contract, strict liability or tort (including negligence or 
+otherwise) arising in any way out of the use of this software, even if 
+advised of the possibility of such damage. 
 
 =cut
 

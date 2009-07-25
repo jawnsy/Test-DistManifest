@@ -20,7 +20,7 @@ my $builder = Module::Build->new(
   dist_author           => 'Jonathan Yu <frequency@cpan.org>',
   dist_version_from     => 'lib/Test/DistManifest.pm',
   dynamic_config        => 0,
-  create_readme         => 1,
+  create_readme         => 0,
   recursive_test_files  => 1,
   sign                  => 1,
   create_packlist       => 1,
@@ -33,7 +33,7 @@ my $builder = Module::Build->new(
 
     # Pragmatic and special modules
     'Carp'              => 1.04,
-    'version'           => 0.74,
+    'version'           => 0,
     'warnings'          => 0,
     'strict'            => 0,
 
@@ -56,16 +56,6 @@ my $builder = Module::Build->new(
     'Test::NoWarnings'        => 0.084,
   },
   recommends => {
-    # Author tests
-    'Test::Perl::Critic'        => 1.01,
-    'Perl::Critic'              => 1.096,
-    'Test::YAML::Meta'          => 0.11,
-    'Test::Kwalitee'            => 1.01,
-    'Test::Signature'           => 1.10,
-    'Test::Pod'                 => 1.14,
-    'Test::Pod::Coverage'       => 1.04,
-    'Test::Portability::Files'  => 0.05,
-    'Test::MinimumVersion'      => 0.008,
   },
   conflicts => {
   },
