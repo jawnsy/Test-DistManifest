@@ -3,30 +3,32 @@
 # t/01min-perl.t
 #  Tests that the minimum required Perl version matches META.yml
 #
-# By Jonathan Yu <frequency@cpan.org>, 2008-2009. All rights reversed.
-#
 # $Id$
-#
-# All rights to this test script are hereby disclaimed and its contents
-# released into the public domain by the author. Where this is not possible,
-# you may use this file under the same terms as Perl itself.
 
 use strict;
 use warnings;
 
 use Test::More;
 
-unless ($ENV{TEST_AUTHOR}) {
-  plan(skip_all => 'Set TEST_AUTHOR to enable module author tests');
+unless ($ENV{AUTOMATED_TESTING} or $ENV{RELEASE_TESTING}) {
+  plan skip_all => 'Author tests not required for installation';
 }
 
-eval {
-  require Test::MinimumVersion;
-};
-if ($@) {
-  plan skip_all => 'Test::MinimumVersion required to test minimum Perl';
-}
+my %MODULES = (
+  'Test::MinimumVersion'  => 0.008,
+  'Perl::MinimumVersion'  => 1.20,
+);
 
-Test::MinimumVersion->import();
+while (my ($module, $version) = each %MODULES) {
+  eval "use $module $version";
+  next unless $@;
+
+  if ($ENV{RELEASE_TESTING}) {
+    die 'Could not load release-testing module ' . $module;
+  }
+  else {
+    plan skip_all => $module . ' not available for testing';
+  }
+}
 
 all_minimum_version_from_metayml_ok();
