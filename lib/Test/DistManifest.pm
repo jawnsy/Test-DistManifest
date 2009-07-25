@@ -20,11 +20,11 @@ Test::DistManifest - Author test that validates a package MANIFEST
 
 =head1 VERSION
 
-Version 1.2.2 ($Id$)
+Version 1.2.3 ($Id$)
 
 =cut
 
-use version; our $VERSION = qv('1.2.2');
+use version; our $VERSION = qv('1.2.3');
 
 =head1 EXPORTS
 
