@@ -2,11 +2,6 @@
 #  Tests that your manifest matches the distribution as it exists.
 #
 # $Id$
-#
-# Copyright (C) 2008-2009 by Jonathan Yu <frequency@cpan.org>
-#
-# This package is distributed with the same licensing terms as Perl itself.
-# For additional information, please read the included `LICENSE' file.
 
 package Test::DistManifest;
 
@@ -99,8 +94,8 @@ Everything in B<MANIFEST> exists
 
 =item 2
 
-Everything in the package is listed in B<MANIFEST>, or subsequently matches a
-regular expression mask in B<MANIFEST.SKIP>
+Everything in the package is listed in B<MANIFEST>, or subsequently matches
+a regular expression mask in B<MANIFEST.SKIP>
 
 =item 3
 
@@ -463,6 +458,16 @@ to correct the situation. Hopefully this will be obvious for anybody using
 the module; the emphasis should be on generating helpful error messages.
 
 =back
+
+=head1 QUALITY ASSURANCE METRICS
+
+=head2 TEST COVERAGE
+  
+  ----------------------- ------ ------ ------ ------ ------ ------
+  File                    stmt   bran   cond   sub    pod    total
+  ----------------------- ------ ------ ------ ------ ------ ------
+  Test/DistManifest.pm    96.1   95.8   100.0  100.0  100.0  96.8
+  Total                   96.1   95.8   100.0  100.0  100.0  96.8
 
 =head1 LICENSE
 
