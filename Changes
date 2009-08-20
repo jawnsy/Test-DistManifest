@@ -1,4 +1,4 @@
-1.003 - XXX - Jonathan Yu <frequency@cpan.org>
+1.003 - 20 Aug 2009 - Jonathan Yu <frequency@cpan.org>
 
   + Remove generated files from the repository
   + Use a simple string version, per David Golden's article:
