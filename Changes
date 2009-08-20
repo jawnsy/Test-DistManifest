@@ -1,0 +1,113 @@
+1.003 - XXX - Jonathan Yu <frequency@cpan.org>
+
+  + Remove generated files from the repository
+  + Use a simple string version, per David Golden's article:
+    http://www.dagolden.com/index.php/369/version-numbers-should-be-boring/
+  + No longer use Perl::Critic to test
+  + Remove modules available in core since Perl 5.6
+    from requires
+
+1.2.3 - 25 Jul 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Added coverage information
+  + Rewrote LICENSE and README slightly
+  + Updated the checkmanifest.t example file and synopsis,
+    it now checks Alias' flags (AUTOMATED_TESTING,
+    RELEASE_TESTING) rather than TEST_AUTHOR
+  + No longer test Perl::Critic during AUTOMATED_TESTING,
+    only RELEASE_TESTING. Thanks to Elliot Shank for the
+    discussion in a private mail.
+  + No more versioned dependency on version.pm
+  + Use a generic README, no longer produce one
+  + Changed critic.rc to ignore PodSpelling policy (fixes
+    a bug in Debian, BTS#538115 -- when Pod::Spell and
+    other dependencies are installed)
+  + Disable "one dot only" in filenames (portability test).
+    This breaks compatibility with OpenVMS.
+  + Updated perlcriticrc with new preferences, removed
+    "no critic" stuff for those in Test/DistManifest.pm
+  + Added copyleft statements to test files
+  + Minor documentation fix
+  + Small POD fix
+
+1.2.2 - 15 May 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Minor problem forgetting to bump one of the version
+    numbers in META.yml
+  + Adjusted dependencies - changed minimum version
+    dependency to Test::Builder 0.72 and version 0.74,
+    which are core modules in Perl 5.10
+
+1.2.1 - 14 May 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Moved some small changes from MANIFEST.SKIP to
+    CIRCULAR.SKIP
+  + This release is particularly important to get rid of
+    Win32 test failures, where `Build.bat' is created
+    instead of `Build'
+
+1.2.0 - 14 May 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Updated t/03warn-only.t test with new semantics (always
+    fail if parsing fails)
+  + Note that circular dependencies and parsing errors will
+    always be considered fatal, regardless of the setting
+    MANIFEST_WARN_ONLY
+  + Suppress refactoring requirement - even though
+    manifest_ok is really complex, it doesn't make sense
+    to exist in separate subs
+  + Added new feature for nonfatal errors (see updated POD)
+
+1.1.4 - 26 Apr 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Added .tmp to MANIFEST.SKIP
+  + Added Build.bat to MANIFEST.SKIP for Win32 builds...
+
+1.1.3 - 23 Apr 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Added Win32 compatibility code. Closes the Win32
+    compatibility bug (RT#44401)
+  + Updated Build.PL
+  + Added META.yml
+  + Changed to a passthrough Makefile instead of a classic
+    one
+  + Updated version dependency for version.pm
+  + Removed use of Test::Prereq, because it needs to use
+    CPAN to do its work
+  + Fix OS detection routines
+  + Modified the module so that it works portably (even
+    with Win32, and other platforms File::Spec supports)
+
+1.1.2 - 14 Mar 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Updated prerequisite information in Build.PL and META.yml
+  + Add a more thorough description for the POD
+  + Fix dependencies in Build.PL and META.yml
+  + Clarified licensing restrictions
+  + CIRCULAR.SKIP became out of sync with the real
+    MANIFEST.SKIP, and so was causing problems with debian/
+
+1.1.1 - 12 Mar 2009 - Jonathan Yu <frequency@cpan.org>
+
+  + Added "^debian/" as a mask for MANIFEST.SKIP. This is
+    where Debian package control files go, and so should
+    not be considered part of the package. Hopefully this
+    won't break anything :-)
+
+1.1.0 - 12 Mar 2009 - Jonathan Yu <frequency@cpan.org>
+  + Modified Changelog name to "Changes" (instead of CHANGES)
+  + Updated Makefile.PL
+  + Added a test for circular dependencies (those that exist
+    in both MANIFEST and MANIFEST.SKIP) -- thanks Apocalypse!
+  + Updated the POD and the README to reflect this repository's
+    location
+  + Fixed version number in META.yml -> numeric "1.001000"
+    style version numbering, to get around version.pm bugs
+  + Replaced PerlCritic's POD section to enforce 'LICENSE'
+    instead of 'COPYRIGHT' (which is used by CPANTS/Kwalitee)
+  + Removed Test::NoWarnings from the Signature test, which
+    throws warnings on purpose.
+
+1.0 - 25 Dec 2008 - Jonathan Yu <frequency@cpan.org>
+
+  + Initial release

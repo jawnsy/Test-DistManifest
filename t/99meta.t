@@ -1,7 +1,7 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -T
 
-# t/01kwalitee.t
-#  Uses the CPANTS Kwalitee metrics to test the distribution
+# t/99meta.t
+#  Tests that the META.yml meets the specification
 #
 # $Id$
 
@@ -15,8 +15,7 @@ unless ($ENV{AUTOMATED_TESTING} or $ENV{RELEASE_TESTING}) {
 }
 
 my %MODULES = (
-  'Test::Kwalitee'          => 1.01,
-  'Module::CPANTS::Analyse' => 0.85,
+  'Test::CPAN::Meta'  => 0.13,
 );
 
 while (my ($module, $version) = each %MODULES) {
@@ -30,3 +29,8 @@ while (my ($module, $version) = each %MODULES) {
     plan skip_all => $module . ' not available for testing';
   }
 }
+
+plan tests => 2;
+
+# counts as 2 tests
+meta_spec_ok('META.yml', undef, 'META.yml matches the META-spec');

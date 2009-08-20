@@ -1,7 +1,7 @@
-#!/usr/bin/perl -T
+#!/usr/bin/perl
 
-# t/01pod-coverage.t
-#  Ensures all subroutines are documented with POD
+# t/99kwalitee.t
+#  Uses the CPANTS Kwalitee metrics to test the distribution
 #
 # $Id$
 
@@ -15,12 +15,9 @@ unless ($ENV{AUTOMATED_TESTING} or $ENV{RELEASE_TESTING}) {
 }
 
 my %MODULES = (
-  'Test::Pod::Coverage' => 1.04,
+  'Test::Kwalitee'          => 1.01,
+  'Module::CPANTS::Analyse' => 0.85,
 );
-
-# Module::CPANTS::Kwalitee won't detect that we're using test modules as
-# author tests, so we convince it that we're loading it in the normal way.
-0 and require Test::Pod::Coverage;
 
 while (my ($module, $version) = each %MODULES) {
   eval "use $module $version";
@@ -33,5 +30,3 @@ while (my ($module, $version) = each %MODULES) {
     plan skip_all => $module . ' not available for testing';
   }
 }
-
-all_pod_coverage_ok();

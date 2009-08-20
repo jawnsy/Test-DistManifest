@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# t/01min-perl.t
+# t/99min-perl.t
 #  Tests that the minimum required Perl version matches META.yml
 #
 # $Id$

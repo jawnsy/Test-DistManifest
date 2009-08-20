@@ -1,6 +1,6 @@
 #!/usr/bin/perl -T
 
-# t/01pod.t
+# t/97pod.t
 #  Checks that POD commands are correct
 #
 # $Id$
