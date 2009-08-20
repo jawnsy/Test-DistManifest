@@ -11,6 +11,7 @@ use warnings;
 use Test::Builder::Tester tests => 10; # The sum of all subtests
 use Test::DistManifest;
 use Test::NoWarnings; # 1 test
+use File::Spec ();
 
 # If MANIFEST_WARN_ONLY is set, unset it
 if (exists($ENV{MANIFEST_WARN_ONLY})) {
@@ -60,7 +61,7 @@ test_out('not ok 3 - All files are listed in MANIFEST or skipped');
 test_out('not ok 4 - All files listed in MANIFEST exist on disk');
 test_out('ok 5 - No files are in both MANIFEST and MANIFEST.SKIP');
 test_fail(+1);
-manifest_ok('MANIFEST.EXTRA', 'MANIFEST.SKIP');
+manifest_ok(File::Spec->catfile('t', 'extra'), 'MANIFEST.SKIP');
 test_test(
   name        => 'Fails when MANIFEST contains extra files',
   skip_err    => 1,
@@ -75,7 +76,7 @@ test_out('ok 3 - All files are listed in MANIFEST or skipped');
 test_out('ok 4 - All files listed in MANIFEST exist on disk');
 test_out('not ok 5 - No files are in both MANIFEST and MANIFEST.SKIP');
 test_fail(+1);
-manifest_ok('MANIFEST', 'CIRCULAR.SKIP');
+manifest_ok('MANIFEST', File::Spec->catfile('t', 'circular'));
 test_test(
   name        => 'Fails when files are in both MANIFEST and MANIFEST.SKIP',
   skip_err    => 1,

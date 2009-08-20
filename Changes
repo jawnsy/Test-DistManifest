@@ -6,6 +6,7 @@
   + No longer use Perl::Critic to test
   + Remove modules available in core since Perl 5.6
     from requires
+  + Move CIRCULAR.SKIP and MANIFEST.EXTRA into t/
 
 1.2.3 - 25 Jul 2009 - Jonathan Yu <frequency@cpan.org>
 
