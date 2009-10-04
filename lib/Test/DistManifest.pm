@@ -15,11 +15,11 @@ Test::DistManifest - Author test that validates a package MANIFEST
 
 =head1 VERSION
 
-Version 1.003 ($Id$)
+Version 1.004 ($Id$)
 
 =cut
 
-our $VERSION = '1.003';
+our $VERSION = '1.004';
 $VERSION = eval $VERSION;
 
 =head1 EXPORTS
@@ -357,7 +357,7 @@ Example code:
 
 =head1 AUTHOR
 
-Jonathan Yu E<lt>frequency@cpan.orgE<gt>
+Jonathan Yu E<lt>jawnsy@cpan.orgE<gt>
 
 =head2 CONTRIBUTORS
 
@@ -472,7 +472,7 @@ the module; the emphasis should be on generating helpful error messages.
 
 =head1 LICENSE
 
-Copyright (C) 2008-2009 by Jonathan Yu <frequency@cpan.org>
+Copyright (C) 2008-2009 by Jonathan Yu <jawnsy@cpan.org>
 
 This package is distributed under the same terms as Perl itself. Please
 see the F<LICENSE> file included in this distribution for full details of

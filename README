@@ -2,7 +2,7 @@ $Id$
 
 Test::DistManifest is an author test that validates a package MANIFEST
 
-Copyright 2008-2009 by Jonathan Yu <frequency@cpan.org>. All rights reserved.
+Copyright 2008-2009 by Jonathan Yu <jawnsy@cpan.org>. All rights reserved.
 
 INSTALLATION
 
