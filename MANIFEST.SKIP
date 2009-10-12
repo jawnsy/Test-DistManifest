@@ -17,6 +17,7 @@
 ^inc/Module/Install
 
 # Makemaker generated files and dirs.
+^MYMETA\.yml$
 \bMANIFEST\.bak
 \bMakefile$
 \bblib/

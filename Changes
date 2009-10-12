@@ -1,6 +1,7 @@
-1.004 - XXX - Jonathan Yu <jawnsy@cpan.org>
+1.004 - 12 Oct 2009 - Jonathan Yu <jawnsy@cpan.org>
 
   + Changed my mail address to jawnsy@cpan.org
+  + Update MANIFEST.SKIP to include MYMETA.yml (prevents test failure)
 
 1.003 - 20 Aug 2009 - Jonathan Yu <frequency@cpan.org>
 
