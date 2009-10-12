@@ -2,7 +2,7 @@
 
   + Fix the dist (don't overwrite the Changes file)
 
-1.004 - 12 Oct 2009 - Jonathan Yu <jawnsy@cpan.org>
+1.004 - 11 Oct 2009 - Jonathan Yu <jawnsy@cpan.org>
 
   + Changed my mail address to jawnsy@cpan.org
   + Update MANIFEST.SKIP to include MYMETA.yml (prevents test failure)
