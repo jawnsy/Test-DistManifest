@@ -15,11 +15,11 @@ Test::DistManifest - Author test that validates a package MANIFEST
 
 =head1 VERSION
 
-Version 1.005 ($Id$)
+Version 1.006 ($Id$)
 
 =cut
 
-our $VERSION = '1.005';
+our $VERSION = '1.006';
 $VERSION = eval $VERSION;
 
 =head1 EXPORTS
@@ -190,7 +190,7 @@ sub manifest_ok {
   my $manifest = Module::Manifest->new;
 
   unless ($test->has_plan) {
-    $test->plan(tests => 5);
+    $test->plan(tests => 4);
   }
 
   # Try to parse the MANIFEST and MANIFEST.SKIP files
@@ -206,9 +206,11 @@ sub manifest_ok {
     $manifest->open(skip     => $skipfile);
   };
   if ($@) {
+    $test->diag('Unable to parse MANIFEST.SKIP file:');
     $test->diag($!);
+    $test->diag('Using default skip data from ExtUtils::Manifest 1.58');
+    
   }
-  $test->ok(!$@, 'Parse MANIFEST.SKIP or equivalent');
 
   my @files;
   # Callback function called by File::Find
@@ -304,13 +306,13 @@ sub manifest_ok {
 
 =head1 GUTS
 
-This module internally plans 5 tests:
+This module internally plans 4 tests:
 
 =over
 
 =item 1
 
-B<MANIFEST> and B<MANIFEST.SKIP> can be parsed by C<Module::Manifest>
+B<MANIFEST> can be parsed by C<Module::Manifest>
 
 =item 2
 

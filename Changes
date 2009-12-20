@@ -1,3 +1,9 @@
+1.006 - XXX - Jonathan Yu <jawnsy@cpan.org>
+
+  + Update MANIFEST.SKIP according to new defaults provided by
+    ExtUtils::Manifest
+  + Cleaned up some documentation issues
+
 1.005 - 12 Oct 2009 - Jonathan Yu <jawnsy@cpan.org>
 
   + Fix the dist (don't overwrite the Changes file)
