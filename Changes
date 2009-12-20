@@ -3,6 +3,7 @@
   + Update MANIFEST.SKIP according to new defaults provided by
     ExtUtils::Manifest
   + Cleaned up some documentation issues
+  + Use the default MANIFEST.SKIP if ours can't be parsed
 
 1.005 - 12 Oct 2009 - Jonathan Yu <jawnsy@cpan.org>
 
