@@ -105,6 +105,12 @@ so as to avoid an unsatisfiable dependency conditions
 
 =back
 
+If there is no B<MANIFEST.SKIP> included in your distribution, this module
+will replicate the toolchain behaviour of using the default system-wide
+MANIFEST.SKIP file. To view the contents of this file, use the command:
+
+  $ perldoc -m ExtUtils::MANIFEST.SKIP
+
 =head1 SYNOPSIS
 
   use Test::More;
@@ -209,7 +215,48 @@ sub manifest_ok {
     $test->diag('Unable to parse MANIFEST.SKIP file:');
     $test->diag($!);
     $test->diag('Using default skip data from ExtUtils::Manifest 1.58');
-    
+    $manifest->parse( skip => [
+      # Version control files
+      '\bRCS\b',
+      '\bCVS\b',
+      '\bSCCS\b',
+      ',v$',
+      '\B\.svn\b',
+      '\B\.git\b',
+      '\B\.gitignore\b',
+      '\b_darcs\b',
+      '\B\.cvsignore$',
+      # Build remnants
+      '\bMANIFEST\.bak',
+      '\bMakefile$',
+      '\bblib/',
+      '\bMakeMaker-\d',
+      '\bpm_to_blib\.ts$',
+      '\bpm_to_blib$',
+      '\bblibdirs\.ts$',
+      '\bBuild$',
+      '\b_build/',
+      '\bBuild.bat$',
+      '\bBuild.COM$',
+      '\bBUILD.COM$',
+      '\bbuild.com$',
+      '^MYMETA\.',
+      # Temporary and backup files
+      '~$',
+      '\.old$',
+      '\#$',
+      '\b\.#',
+      '\.bak$',
+      '\.tmp$',
+      '\.#',
+      '\.rej$',
+      # Mac OSX metadata
+      '\B\.DS_Store',
+      '\B\._',
+      # Devel::Cover files
+      '\bcover_db\b',
+      '\bcovered\b',
+    ]);
   }
 
   my @files;
