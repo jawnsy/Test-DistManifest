@@ -1,4 +1,4 @@
-1.006 - XXX - Jonathan Yu <jawnsy@cpan.org>
+1.006 - 21 Dec 2009 - Jonathan Yu <jawnsy@cpan.org>
 
   + Update MANIFEST.SKIP according to new defaults provided by
     ExtUtils::Manifest
