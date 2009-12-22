@@ -416,12 +416,16 @@ Your name here ;-)
 
 =over
 
-=item * Thanks to Adam Kennedy E<lt>adamk@cpan.orgE<gt>, developer of
-Module::Manifest, which is used in this module.
+=item *
 
-=item * Thanks to Apocalypse E<lt>apocal@cpan.orgE<gt>, for helping me
-track down an obscure bug caused by circular dependencies: when files are
-expected by MANIFEST but explictly skipped by MANIFEST.SKIP.
+Thanks to Adam Kennedy for developing L<Module::Manifest>, which provides
+much of the core functionality for these tests.
+
+=item *
+
+Thanks to Apocalypse E<lt>apocal@cpan.orgE<gt>, for helping me track down
+an obscure bug caused by circular dependencies: when files are expected by
+MANIFEST but explictly skipped by MANIFEST.SKIP.
 
 =back
 
