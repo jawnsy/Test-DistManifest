@@ -8,7 +8,7 @@
 use strict;
 use warnings;
 
-use Test::Builder::Tester tests => 3; # The sum of all subtests
+use Test::Builder::Tester tests => 4; # The sum of all subtests
 use Test::DistManifest;
 use Test::NoWarnings; # 1 test
 
