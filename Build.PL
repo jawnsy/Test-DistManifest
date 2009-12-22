@@ -21,9 +21,6 @@ my $builder = Module::Build->new(
   sign                  => 1,
   create_packlist       => 1,
 
-  # Maintain compatibility with ExtUtils::MakeMaker installations
-  create_makefile_pl    => 'passthrough',
-
   requires => {
     'perl'              => 5.006,
 

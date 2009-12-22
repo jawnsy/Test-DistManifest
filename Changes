@@ -5,6 +5,7 @@
   + Cleaned up some documentation issues
   + Use the default MANIFEST.SKIP if ours can't be parsed
   + Updated tests to match new behaviour
+  + Remove pass-through Build.PL
 
 1.005 - 12 Oct 2009 - Jonathan Yu <jawnsy@cpan.org>
 
