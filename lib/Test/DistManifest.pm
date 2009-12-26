@@ -517,11 +517,9 @@ the module; the emphasis should be on generating helpful error messages.
 
 =head2 TEST COVERAGE
   
-  ----------------------- ------ ------ ------ ------ ------ ------
-  File                    stmt   bran   cond   sub    pod    total
+  File                     stmt   bran   cond   sub    pod   total
   ----------------------- ------ ------ ------ ------ ------ ------
   Test/DistManifest.pm    96.1   95.8   100.0  100.0  100.0  96.8
-  Total                   96.1   95.8   100.0  100.0  100.0  96.8
 
 =head1 LICENSE
 
