@@ -1,3 +1,7 @@
+1.008 - XXX - Jonathan Yu <jawnsy@cpan.org>
+
+  + Updated POD
+
 1.007 - 22 Dec 2009 - Jonathan Yu <jawnsy@cpan.org>
 
   + Update skip info in t/circular (hopefully this fixes failures)
