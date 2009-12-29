@@ -15,11 +15,11 @@ Test::DistManifest - Author test that validates a package MANIFEST
 
 =head1 VERSION
 
-Version 1.008 ($Id$)
+Version 1.009 ($Id$)
 
 =cut
 
-our $VERSION = '1.008';
+our $VERSION = '1.009';
 $VERSION = eval $VERSION;
 
 =head1 EXPORTS
