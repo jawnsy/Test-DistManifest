@@ -1,3 +1,10 @@
+1.009 - 28 Dec 2009 - Jonathan Yu <jawnsy@cpan.org>
+
+  + Fixes tests so that the "default MANIFEST.SKIP" test is
+    not run; this could fail when the default MANIFEST.SKIP
+    provided by ExtUtils::Manifest doesn't cover special
+    directories like debian/ (Debian metadata)
+
 1.008 - 28 Dec 2009 - Jonathan Yu <jawnsy@cpan.org>
 
   + Updated POD
