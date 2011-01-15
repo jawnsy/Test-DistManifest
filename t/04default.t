@@ -1,9 +1,6 @@
 #!/usr/bin/perl -T
 
-# t/04default.t
-#  Test loading of a default MANIFEST.SKIP
-#
-# $Id$
+# Test loading of a default MANIFEST.SKIP
 
 use strict;
 use warnings;

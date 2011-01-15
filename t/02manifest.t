@@ -1,9 +1,6 @@
 #!/usr/bin/perl -T
 
-# t/02manifest.t
-#  Ensures MANIFEST file is up-to-date
-#
-# $Id$
+# Ensures MANIFEST file is up-to-date
 
 use strict;
 use warnings;

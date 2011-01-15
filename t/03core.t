@@ -1,9 +1,6 @@
 #!/usr/bin/perl -T
 
-# t/03core.t
-#  Ensures the MANIFEST test output looks reasonable.
-#
-# $Id$
+# Ensures the MANIFEST test output looks reasonable
 
 use strict;
 use warnings;

@@ -2,8 +2,6 @@
 
 # examples/checkmanifest.t
 #  Ensures MANIFEST file is up-to-date
-#
-# $Id$
 
 use strict;
 use warnings;
