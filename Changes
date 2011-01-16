@@ -1,6 +1,13 @@
 {{$NEXT}}
 
+1.010     2011-01-15 20:03:52 America/Toronto
+
+          TRIAL RELEASE
+
           Migrate package to Dist::Zilla
+
+          Drop a bunch of apparently-unnecessary dependencies. Now only
+          support Perl 5.8.0+
 
 1.009     2009-12-28
 
