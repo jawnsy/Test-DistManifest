@@ -1,8 +1,8 @@
 {{$NEXT}}
 
-1.010     2011-01-15 20:03:52 America/Toronto
+1.011     2011-04-24 12:43:21 America/Toronto
 
-          TRIAL RELEASE
+          (Previously released as 1.010-TRIAL)
 
           Migrate package to Dist::Zilla
 
