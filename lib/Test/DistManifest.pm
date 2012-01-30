@@ -187,9 +187,9 @@ sub manifest_ok {
   if ($@) {
     $test->diag('Unable to parse MANIFEST.SKIP file:');
     $test->diag($!);
-    $test->diag('Using default skip data from ExtUtils::Manifest 1.58');
+    $test->diag('Using default skip data from ExtUtils::Manifest 6.62');
     $manifest->parse( skip => [
-      # Version control files
+      # Avoid version control files.
       '\bRCS\b',
       '\bCVS\b',
       '\bSCCS\b',
@@ -199,22 +199,30 @@ sub manifest_ok {
       '\B\.gitignore\b',
       '\b_darcs\b',
       '\B\.cvsignore$',
-      # Build remnants
+
+      # Avoid VMS specific MakeMaker generated files
+      '\bDescrip.MMS$',
+      '\bDESCRIP.MMS$',
+      '\bdescrip.mms$',
+
+      # Avoid Makemaker generated and utility files.
       '\bMANIFEST\.bak',
       '\bMakefile$',
       '\bblib/',
       '\bMakeMaker-\d',
       '\bpm_to_blib\.ts$',
       '\bpm_to_blib$',
-      '\bblibdirs\.ts$',
+      '\bblibdirs\.ts$',        # 6.18 through 6.25 generated this
+
+      # Avoid Module::Build generated and utility files.
       '\bBuild$',
       '\b_build/',
       '\bBuild.bat$',
       '\bBuild.COM$',
       '\bBUILD.COM$',
       '\bbuild.com$',
-      '^MYMETA\.',
-      # Temporary and backup files
+
+      # Avoid temp and backup files.
       '~$',
       '\.old$',
       '\#$',
@@ -223,12 +231,19 @@ sub manifest_ok {
       '\.tmp$',
       '\.#',
       '\.rej$',
+
+      # Avoid OS-specific files/dirs
       # Mac OSX metadata
       '\B\.DS_Store',
+      # Mac OSX SMB mount metadata files
       '\B\._',
-      # Devel::Cover files
+
+      # Avoid Devel::Cover and Devel::CoverX::Covered files.
       '\bcover_db\b',
       '\bcovered\b',
+
+      # Avoid MYMETA files
+      '^MYMETA\.',
     ]);
   }
 
