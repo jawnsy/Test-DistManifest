@@ -11,6 +11,7 @@ use warnings;
 use Test::Builder::Tester tests => 4; # The sum of all subtests
 use Test::DistManifest;
 use Test::NoWarnings; # 1 test
+use File::Spec;
 
 # Set MANIFEST_WARN_ONLY to true
 $ENV{MANIFEST_WARN_ONLY} = 1;

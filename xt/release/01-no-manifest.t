@@ -7,7 +7,6 @@ use warnings;
 
 use Test::DistManifest;
 use Test::More; # for plan
-use File::Spec;
 require Test::Builder::Tester;
 require Test::NoWarnings;
 
