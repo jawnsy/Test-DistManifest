@@ -11,10 +11,6 @@ use File::Spec;
 require Test::Builder::Tester;
 require Test::NoWarnings;
 
-unless ($ENV{RELEASE_TESTING}) {
-  plan skip_all => 'Author tests not required for installation';
-}
-
 Test::Builder::Tester->import( tests => 2 );
 Test::NoWarnings->import(); # 1 test
 
