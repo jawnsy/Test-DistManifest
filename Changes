@@ -1,5 +1,7 @@
 {{$NEXT}}
 
+1.012     2012-04-22 13:45:02 America/Vancouver
+
           Now taking default MANIFEST.SKIP content directly from installed
           version of ExtUtils::Manifest, rather than inlining a copy (Karen
           Etheridge)
