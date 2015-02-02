@@ -1,3 +1,6 @@
-Test-DistManifest-*
-.*
-!.gitignore
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/Test-DistManifest-*/
+/Test-DistManifest-*.tar.gz
