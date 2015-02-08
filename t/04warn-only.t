@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# t/03warn-only.t
+# t/04warn-only.t
 #  Ensures the nonfatal mode works properly
 #
 # $Id$
