@@ -1,0 +1,4 @@
+#!include_default
+
+^Foo-[\d.]+\.tar\.gz$
+^Foo-[\d.]+/
