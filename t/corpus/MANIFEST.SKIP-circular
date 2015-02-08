@@ -1,6 +1,7 @@
 # Skip a file defined in MANIFEST (for confusing results)
 MANIFEST\.SKIP
 
+#!start included /Users/ether/git/Test-DistManifest/t/corpus/Foo/MANIFEST.SKIP
 # Avoid version control files.
 \bRCS\b
 \bCVS\b
@@ -25,6 +26,7 @@ MANIFEST\.SKIP
 \bpm_to_blib\.ts$
 \bpm_to_blib$
 \bblibdirs\.ts$         # 6.18 through 6.25 generated this
+\b_eumm/                # 7.05_05 and above
 
 # Avoid Module::Build generated and utility files.
 \bBuild$
@@ -33,6 +35,9 @@ MANIFEST\.SKIP
 \bBuild.COM$
 \bBUILD.COM$
 \bbuild.com$
+
+# and Module::Build::Tiny generated files
+\b_build_params$
 
 # Avoid temp and backup files.
 ~$
@@ -43,6 +48,7 @@ MANIFEST\.SKIP
 \.tmp$
 \.#
 \.rej$
+\..*\.sw.?$
 
 # Avoid OS-specific files/dirs
 # Mac OSX metadata
@@ -53,12 +59,13 @@ MANIFEST\.SKIP
 # Avoid Devel::Cover and Devel::CoverX::Covered files.
 \bcover_db\b
 \bcovered\b
- 
+
+# Avoid prove files
+\B\.prove$
+
 # Avoid MYMETA files
 ^MYMETA\.
+#!end included included /Users/ether/git/Test-DistManifest/t/corpus/Foo/MANIFEST.SKIP
 
-# Test::Kwalitee cache files.
-^Debian_CPANTS\.txt
-
-# Debian package control files
-^debian/
+^Foo-[\d.]+\.tar\.gz$
+^Foo-[\d.]+/
