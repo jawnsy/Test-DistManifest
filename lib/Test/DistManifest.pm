@@ -99,11 +99,11 @@ MANIFEST.SKIP file. To view the contents of this file, use the command:
 
 =head1 SYNOPSIS
 
-  use Test::More;
+This is the common idiom for author test modules like this, but see
+the full example in examples/checkmanifest.t and, more importantly,
+Adam Kennedy's article: L<http://use.perl.org/use.perl.org/_Alias/journal/38822.html>
 
-  # This is the common idiom for author test modules like this, but see
-  # the full example in examples/checkmanifest.t and, more importantly,
-  # Adam Kennedy's article: http://use.perl.org/~Alias/journal/38822
+  use Test::More;
   eval 'use Test::DistManifest';
   if ($@) {
     plan skip_all => 'Test::DistManifest required to test MANIFEST';
