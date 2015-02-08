@@ -24,7 +24,7 @@ use File::Spec; # Portability
 use File::Spec::Unix; # To get UNIX-style paths
 use File::Find (); # Traverse the filesystem tree
 
-use Module::Manifest;
+use Module::Manifest 0.07;
 use Test::Builder;
 
 my $test = Test::Builder->new;
