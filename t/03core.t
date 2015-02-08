@@ -41,7 +41,7 @@ test_out('not ok 2 - All files are listed in MANIFEST or skipped');
 test_out('not ok 3 - All files listed in MANIFEST exist on disk');
 test_out('ok 4 - No files are in both MANIFEST and MANIFEST.SKIP');
 test_fail(+1);
-manifest_ok(File::Spec->catfile('t', 'extra'), 'MANIFEST.SKIP');
+manifest_ok(File::Spec->catfile('t', 'corpus', 'MANIFEST-extra'), 'MANIFEST.SKIP');
 test_test(
   name      => 'Fails when MANIFEST contains extra files',
   skip_err  => 1,
@@ -55,7 +55,7 @@ test_out('ok 2 - All files are listed in MANIFEST or skipped');
 test_out('ok 3 - All files listed in MANIFEST exist on disk');
 test_out('not ok 4 - No files are in both MANIFEST and MANIFEST.SKIP');
 test_fail(+1);
-manifest_ok('MANIFEST', File::Spec->catfile('t', 'circular'));
+manifest_ok('MANIFEST', File::Spec->catfile('t', 'corpus', 'MANIFEST.SKIP-circular'));
 test_test(
   name      => 'Fails when files are in both MANIFEST and MANIFEST.SKIP',
   skip_err  => 1,
