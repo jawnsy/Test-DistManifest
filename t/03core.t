@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 # Ensures the MANIFEST test output looks reasonable
 
 use strict;

@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 # t/04warn-only.t
 #  Ensures the nonfatal mode works properly
 #

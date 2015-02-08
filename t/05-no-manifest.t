@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 # Test loading of a default MANIFEST.SKIP
 
 use strict;

@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 # examples/checkmanifest.t
 #  Ensures MANIFEST file is up-to-date
 
