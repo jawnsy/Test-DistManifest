@@ -1,0 +1,12 @@
+TODO:
+
+- outstanding RT tickets
+https://rt.cpan.org/Dist/Display.html?Name=Test-DistManifest
+
+- see CAVEATS:
+    - why would the files not exist on disk?  (and needs EUM API changes anyway.)
+    - unicode tests
+
+*** $manifest->files does not recognize #!include_default ??!
+    confirmed, Module::Manifest is bunk. try to switch to ExtUtils-Manifest.
+
