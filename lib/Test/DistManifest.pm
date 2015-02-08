@@ -130,7 +130,7 @@ to remind you to update these files, using:
   $ make manifest # For ExtUtils::MakeMaker
   $ ./Build manifest # For Module::Build
 
-=head2 Non-Fatal Errors
+=head1 NON-FATAL ERRORS
 
 By default, errors in the B<MANIFEST> or B<MANIFEST.SKIP> files are treated
 as fatal, which really is the purpose of using C<Test::DistManifest> as part
@@ -290,7 +290,7 @@ sub manifest_ok {
 
 =head1 GUTS
 
-This module internally plans 4 tests:
+This module internally plans four tests:
 
 =over
 
