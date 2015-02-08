@@ -3,15 +3,11 @@
 use strict;
 use warnings;
 
+use Test::Builder::Tester tests => 2;
 use Test::DistManifest;
-use Test::More; # for plan
-require Test::Builder::Tester;
-require Test::NoWarnings;
+use Test::NoWarnings;
 use File::Spec;
 use Cwd 'getcwd';
-
-Test::Builder::Tester->import( tests => 2 );
-Test::NoWarnings->import(); # 1 test
 
 # If MANIFEST_WARN_ONLY is set, unset it
 if (exists($ENV{MANIFEST_WARN_ONLY})) {
