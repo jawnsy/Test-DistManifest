@@ -12,11 +12,15 @@ use Test::Builder::Tester tests => 8;
 use Test::DistManifest;
 use Test::NoWarnings; # 1 test
 use File::Spec;
+use Cwd 'getcwd';
 
 # Set MANIFEST_WARN_ONLY to true
 $ENV{MANIFEST_WARN_ONLY} = 1;
 
 # Run the same tests as 03core.t, but make sure they are all non-fatal now.
+
+my $old_wd = getcwd();
+chdir 't/corpus/Foo';
 
 manifest_ok('MANIFEST', 'MANIFEST.SKIP');
 
@@ -41,7 +45,7 @@ test_out('ok 2 - All files are listed in MANIFEST or skipped');
 test_out('ok 3 - All files listed in MANIFEST exist on disk');
 test_out('ok 4 - No files are in both MANIFEST and MANIFEST.SKIP');
 test_fail(+1);
-manifest_ok(File::Spec->catfile('t', 'corpus', 'MANIFEST-extra'), 'MANIFEST.SKIP');
+manifest_ok(File::Spec->catfile($old_wd, 't', 'corpus', 'MANIFEST-extra'), File::Spec->catfile($old_wd, 't', 'default'));
 test_test(
   name      => 'Succeeds even when MANIFEST contains extra files',
   skip_err  => 1,
@@ -55,7 +59,7 @@ test_out('ok 2 - All files are listed in MANIFEST or skipped');
 test_out('ok 3 - All files listed in MANIFEST exist on disk');
 test_out('not ok 4 - No files are in both MANIFEST and MANIFEST.SKIP');
 test_fail(+1);
-manifest_ok('MANIFEST', File::Spec->catfile('t', 'corpus', 'MANIFEST.SKIP-circular'));
+manifest_ok('MANIFEST', File::Spec->catfile($old_wd, 't', 'corpus', 'MANIFEST.SKIP-circular'));
 test_test(
   name      => 'Fails when files are in both MANIFEST and MANIFEST.SKIP',
   skip_err  => 1,
