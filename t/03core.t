@@ -3,9 +3,9 @@
 use strict;
 use warnings;
 
-use Test::Builder::Tester tests => 8;
+use Test::Builder::Tester tests => 7 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
 use Test::DistManifest;
-use Test::NoWarnings; # 1 test
+use if $ENV{AUTHOR_TESTING}, 'Test::Warnings';
 use File::Spec;
 use Cwd 'getcwd';
 
