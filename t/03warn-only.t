@@ -1,4 +1,4 @@
-#!/usr/bin/perl -T
+#!/usr/bin/perl
 
 # t/03warn-only.t
 #  Ensures the nonfatal mode works properly
