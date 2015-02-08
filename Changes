@@ -4,6 +4,7 @@ Revision history for {{$dist->name}}
           - tests are now made against a small sample dist, rather than
             ourselves, to avoid errors with newer ExtUtils::MakeMaker, as well
             as enable running in the raw git repository (RT#78760, RT#101287)
+          - many tooling and metadata updates
 
 1.012     2012-04-22 20:45:02Z
           - Now taking default MANIFEST.SKIP content directly from installed
