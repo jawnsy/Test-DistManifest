@@ -9,6 +9,8 @@ use Test::DistManifest;
 use Test::More; # for plan
 require Test::Builder::Tester;
 require Test::NoWarnings;
+use File::Spec;
+use Cwd 'getcwd';
 
 Test::Builder::Tester->import( tests => 2 );
 Test::NoWarnings->import(); # 1 test
@@ -17,6 +19,9 @@ Test::NoWarnings->import(); # 1 test
 if (exists($ENV{MANIFEST_WARN_ONLY})) {
   delete($ENV{MANIFEST_WARN_ONLY});
 }
+
+my $old_wd = getcwd();
+chdir 't/corpus/Bar';
 
 # Test default MANIFEST.SKIP when none is present
 #  1 test
