@@ -1,5 +1,6 @@
 package Test::DistManifest;
 # ABSTRACT: Author test that validates a package MANIFEST
+# KEYWORDS: test distribution manifest files upload contents author
 
 use strict;
 use warnings;
