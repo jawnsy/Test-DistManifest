@@ -6,7 +6,6 @@ our $VERSION = '1.014';
 
 use strict;
 use warnings;
-use Carp ();
 use ExtUtils::Manifest;
 
 =head1 EXPORTS
