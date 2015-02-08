@@ -28,8 +28,8 @@ test_fail(+1);
 test_out('ok 4 - No files are in both MANIFEST and MANIFEST.SKIP');
 manifest_ok('INVALID.FILE', 'MANIFEST.SKIP');
 test_test(
-  name        => 'Fails when MANIFEST cannot be parsed',
-  skip_err    => 1,
+  name      => 'Fails when MANIFEST cannot be parsed',
+  skip_err  => 1,
 );
 
 # Test what happens when MANIFEST contains some extra files
@@ -55,6 +55,6 @@ test_out('not ok 4 - No files are in both MANIFEST and MANIFEST.SKIP');
 test_fail(+1);
 manifest_ok('MANIFEST', File::Spec->catfile('t', 'circular'));
 test_test(
-  name        => 'Fails when files are in both MANIFEST and MANIFEST.SKIP',
-  skip_err    => 1,
+  name      => 'Fails when files are in both MANIFEST and MANIFEST.SKIP',
+  skip_err  => 1,
 );
