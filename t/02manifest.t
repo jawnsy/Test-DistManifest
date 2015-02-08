@@ -6,9 +6,6 @@ use strict;
 use warnings;
 
 use Test::DistManifest;
-use Config;
 
-# ensure the #!include in MANIFEST.SKIP is expanded - works around RT#85685
-system($Config{make}, 'manifest') && die "$Config{make} manifest failed";
-
+# since we have no MANIFEST.SKIP in the repo, a default one is used.
 manifest_ok();
