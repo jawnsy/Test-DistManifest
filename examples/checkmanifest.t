@@ -6,6 +6,7 @@
 use strict;
 use warnings;
 
+use Test::More;
 use Test::DistManifest;
 
 unless ($ENV{AUTOMATED_TESTING} or $ENV{RELEASE_TESTING}) {
