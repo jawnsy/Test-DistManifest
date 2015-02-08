@@ -71,6 +71,8 @@ distribution.
 
 It tests three things:
 
+=for stopwords unsatisfiable
+
 =over
 
 =item 1
@@ -355,7 +357,7 @@ much of the core functionality for these tests.
 
 Thanks to Apocalypse E<lt>apocal@cpan.orgE<gt>, for helping me track down
 an obscure bug caused by circular dependencies: when files are expected by
-MANIFEST but explictly skipped by MANIFEST.SKIP.
+MANIFEST but explicitly skipped by MANIFEST.SKIP.
 
 =back
 
