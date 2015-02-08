@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.013     2015-02-08 22:42:43Z
           - tests are now made against a small sample dist, rather than
             ourselves, to avoid errors with newer ExtUtils::MakeMaker, as well
             as enable running in the raw git repository (RT#78760, RT#101287)
