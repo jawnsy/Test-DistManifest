@@ -9,4 +9,5 @@ https://rt.cpan.org/Dist/Display.html?Name=Test-DistManifest
 
 *** $manifest->files does not recognize #!include_default ??!
     confirmed, Module::Manifest is bunk. try to switch to ExtUtils-Manifest.
-
+    https://rt.cpan.org/Ticket/Display.html?id=85685
+    https://github.com/Perl-Toolchain-Gang/ExtUtils-Manifest/issues/11
