@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - fix tests that fail when ExtUtils::Manifest's version is not new
+            enough for the build output during installation (RT#102017)
 
 1.013     2015-02-08 22:42:43Z
           - tests are now made against a small sample dist, rather than
