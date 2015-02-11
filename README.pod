@@ -8,7 +8,7 @@ Test::DistManifest - Author test that validates a package MANIFEST
 
 =head1 VERSION
 
-version 1.013
+version 1.014
 
 =head1 SYNOPSIS
 
