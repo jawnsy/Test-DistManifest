@@ -2,7 +2,7 @@ package Test::DistManifest;
 # ABSTRACT: Author test that validates a package MANIFEST
 # KEYWORDS: test distribution manifest files upload contents author
 
-our $VERSION = '1.014';
+our $VERSION = '1.015';
 
 use strict;
 use warnings;
