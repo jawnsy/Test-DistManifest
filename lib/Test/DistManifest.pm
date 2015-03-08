@@ -345,6 +345,29 @@ Example code:
   manifest_ok(); # 4 tests
   ok(1, 'is 1 true?');
 
+=head1 CAUTIONS
+
+It is not wise to include this test in the F<t/> directory of your
+distribution, where it can be run during normal user installs, unless it is
+protected with a guard like so:
+
+    use Test::More;
+    plan skip_all => 'these tests are for authors only!'
+        unless $ENV{AUTHOR_TESTING} or $ENV{RELEASE_TESTING};
+
+...as users will be installing with different versions of the toolchain than
+you released with (or using a different operating system), and may have
+different build artifacts than you.  Instead, put the test in F<xt/> where
+only you will run it.
+
+Additionally, it is wise to keep your installation of L<ExtUtils::Manifest> up
+to date, and to include this in your F<MANIFEST.SKIP>:
+
+    #!include_default
+
+...which includes entries for all of the common "cruft" files, including build
+artifacts that you may not be seeing in your own particular situation.
+
 =head1 ACKNOWLEDGEMENTS
 
 =over
