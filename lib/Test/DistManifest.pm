@@ -1,11 +1,11 @@
+use strict;
+use warnings;
 package Test::DistManifest;
 # ABSTRACT: Author test that validates a package MANIFEST
 # KEYWORDS: test distribution manifest files upload contents author
 
 our $VERSION = '1.015';
 
-use strict;
-use warnings;
 use ExtUtils::Manifest;
 
 =head1 EXPORTS
