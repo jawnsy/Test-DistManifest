@@ -364,21 +364,11 @@ MANIFEST but explicitly skipped by MANIFEST.SKIP.
 
 =head1 SEE ALSO
 
-=over
-
-=item *
-L<Test::CheckManifest>, a module providing similar functionality
-
-=item *
-L<Module::Manifest>
-
-=item *
-L<Dist::Zilla::Plugin::Test::DistManifest>
-
-=item *
-L<Test::Manifest>
-
-=back
+=for :list
+* L<Test::CheckManifest>, a module providing similar functionality
+* L<Module::Manifest>
+* L<Dist::Zilla::Plugin::Test::DistManifest>
+* L<Test::Manifest>
 
 =head1 CAVEATS
 
