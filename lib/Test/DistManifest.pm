@@ -12,11 +12,7 @@ use ExtUtils::Manifest;
 
 By default, this module exports the following functions:
 
-=over
-
-=item * manifest_ok
-
-=back
+=head2 manifest_ok
 
 =cut
 
