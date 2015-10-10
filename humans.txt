@@ -1,0 +1,16 @@
+/* TEAM */
+
+Developer: Jonathan Yu
+CPAN: JAWNSY
+Site: https://jon.imaginary.ca
+Twitter: @jawnsy
+LinkedIn: https://linkedin.com/in/jawnsy
+Location: Toronto, Canada
+
+Developer: Karen Etheridge
+CPAN: ETHER
+							
+/* THANKS */
+
+Adam Kennedy: adamk@cpan.org
+Apocalypse: apocal@cpan.org
