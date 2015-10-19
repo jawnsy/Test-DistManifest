@@ -13,5 +13,12 @@ before_install:
   - "dzil authordeps | cpanm"
   - "dzil listdeps --author | cpanm"
   - "dzil build"
-install: "dzil listdeps | cpanm"
-script: "dzil test --author"
+install:
+  - "dzil listdeps | cpanm"
+script:
+  - "dzil test --author"
+after_success:
+  # For collection of code coverage metrics
+  - "cpanm Devel::Cover::Report::Coveralls"
+  - "cpanm Dist::Zilla::App::Command::cover"
+  - "dzil cover -report coveralls"
