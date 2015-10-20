@@ -9,7 +9,7 @@ perl:
 sudo: false
 env: PERL_CPANM_OPT="--notest --force --skip-satisfied"
 before_install:
-  - "cpanm Dist::Zilla"
+  - "cpanm Dist::Zilla~5.038"
   - "dzil authordeps | cpanm"
   - "dzil listdeps --author | cpanm"
   - "dzil build"
